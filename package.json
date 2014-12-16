@@ -1,0 +1,25 @@
+{
+  "name": "taloenj",
+  "version": "0.0.1",
+  "description": "Print your phone pictures using a thermal printer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "keywords": [
+    "thermal",
+    "printer",
+    "picture",
+    "instant",
+    "polaroid"
+  ],
+  "author": "André Santos",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^0.9.0",
+    "handlebars": "^2.0.0",
+    "spritz": "^0.2.7"
+  }
+}
