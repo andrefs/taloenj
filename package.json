@@ -4,6 +4,7 @@
   "description": "Print your phone pictures using a thermal printer",
   "main": "index.js",
   "scripts": {
+    "prestart": "./bin/compile_templates.sh",
     "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +19,9 @@
   "author": "André Santos",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "async": "^0.9.0",
     "handlebars": "^2.0.0",
-    "spritz": "^0.2.7"
+    "spritz": "^0.2.8"
   }
 }

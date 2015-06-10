@@ -5,7 +5,8 @@ function start(opts){
     // Start (with so many processes as CPU cores)
     spritz.start({
         port: 8090,
-        processes: require('os').cpus().length
+        //processes: require('os').cpus().length,
+        processes:1
     });
 
     routes.inject(spritz);
