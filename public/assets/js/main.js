@@ -72,13 +72,24 @@ taloenj.imgUpload.init = function(){
 };
 
 taloenj.imgUpload.setFilters = function(){
+    console.log(this);
     var el = $(this);
     var orientation = el.hasClass('vertical') ? 'vertical' : 'horizontal';
 
     var brightness = $('input.brightness.'+orientation).val();
     var contrast   = $('input.contrast.'+orientation).val();
+
+    var b = +brightness+0.2;
+    var c = +contrast-0.2;
+
+    var z1 = ((+c-1)/(2*+b*+c));
+    var z2 = ((+c+1)/(2*+b*+c));
+    console.log('convert -level '+(z1*100)+'%,'+(z2*100)+'% -colorspace gray  ~/Downloads/misc/14700_447267968762439_4718233407936251983_n.jpg test.jpg');
+
+
     var img = $('img.preview');
-    var filter = 'grayscale(100%) brightness('+brightness+'%) contrast('+contrast+'%)'
+    var filter = 'grayscale(100%) brightness('+brightness+') contrast('+contrast+')'
+    //var filter = 'brightness('+brightness+') contrast('+contrast+')'
     console.log(filter);
     img.css('-webkit-filter', filter);
     img.css('filter', filter);
@@ -109,7 +120,7 @@ taloenj.imgUpload.preview = function(ev, file, previewID, index, jqXHR){
     taloenj.imgUpload.sbInH = bInH.slider({
         tooltip: 'always',
     });
-    taloenj.imgUpload.sInH = cInH.slider({
+    taloenj.imgUpload.scInH = cInH.slider({
         tooltip: 'always',
     });
 };

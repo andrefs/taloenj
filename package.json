@@ -4,7 +4,6 @@
   "description": "Print your phone pictures using a thermal printer",
   "main": "index.js",
   "scripts": {
-    "prestart": "./bin/compile_templates.sh",
     "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

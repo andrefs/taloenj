@@ -38,18 +38,32 @@ input#img-upload {
 /***********
  * Sliders *
  ***********/
+div.sliders-horizontal .row {
+    margin-bottom:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-div.sliders div.symbol {
+div.sliders-vertical div.symbol {
     padding-bottom: 15px;
 }
-div.sliders div.symbol > span.symbol {
+div.sliders-vertical div.symbol > span.symbol {
     margin-left: -10px;
 }
-div.slider.slider-horizontal {
+
+div.sliders-horizontal div.symbol {
+    float:left;
+    width: 50px;
 }
 
-div.img-preview div.sliders {
-    height: 100%;
+div.sliders-horizontal {
+    padding-bottom: 15px;
+}
+div.sliders-horizontal div.slider {
+    margin-top: 5px;
+}
+div.slider.slider-horizontal {
+    width: 100%;
 }
 
 /***********
