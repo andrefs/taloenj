@@ -32,7 +32,7 @@
 
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
+          <div class="container">
             <div class="navbar-header">
               <a class="navbar-brand" href="#">Taloenj</a>
             </div>
@@ -135,7 +135,11 @@
         </div><!-- /container -->
         <footer>
         </footer>
-        <input id="img-upload" type="file" accept="image/*" >
+        <form class="img-upload" method="POST" action="/api/print" enctype="multipart/form-data" >
+           <input id="img-upload" name="img-upload" type="file" accept="image/*" >
+           <input id="z1" name="z1" type="hidden" value="0">
+           <input id="z2" name="z2" type="hidden" value="1">
+        </form>
     </body>
 </html>
 
