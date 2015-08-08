@@ -19,7 +19,13 @@ taloenj.imgUpload.init = function(){
         ev.preventDefault();
     });
     $('a.img-upload').click(function(ev){
-        $('form.img-upload').submit();
+        $.ajax({
+              url: '/api/print',
+              type: 'POST',
+              data: new FormData($('form.img-upload')[0]),
+              processData: false,
+              contentType: false
+        });
         ev.preventDefault();
      });
 
