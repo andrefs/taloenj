@@ -14,8 +14,14 @@ taloenj.imgUpload = {};
 // Init
 taloenj.imgUpload.init = function(){
     //$('.choose-img').click(function(){ $('input#img-upload').click(); });
-    $('.choose-img').click(function(){ console.log(arguments); $('input#img-upload').click();});
-    $('a.img-upload').click(function(){ $('form.img-upload').submit(); });
+    $('a.choose-img').click(function(ev){
+        $('input#img-upload').click();
+        ev.preventDefault();
+    });
+    $('a.img-upload').click(function(ev){
+        $('form.img-upload').submit();
+        ev.preventDefault();
+     });
 
     // Event functions
     $('#img-upload').change(function (ev) {
