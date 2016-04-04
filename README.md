@@ -12,14 +12,21 @@ It includes:
 
 ## Install and simple setup
 
+The most simple setup is connecting the thermal printer directly
+to your computer. Connect it like this:
+
+![schematics](https://raw.githubusercontent.com/xseignard/thermalPrinter/master/images/schema.png)
+
+ You'll need to install Taloenj:
+
     npm install -g taloenj
 
-    In order to be able to run without `sudo` permissions, you must
-    make sure your use is in the dialout group:
+In order to be able to run without `sudo` permissions, you must
+make sure your use is in the dialout group:
 
-        sudo adduser YOUR_USER dialout
+    sudo adduser YOUR_USER dialout
 
-    log out and log back in.
+log out and log back in.
 
 ### External dependencies
 
@@ -28,10 +35,16 @@ It includes:
 ### Required hardware
 
 * A thermal printer (sold from [Adafruit](http://www.adafruit.com/product/597), [Sparkfun](https://www.sparkfun.com/products/10438), [InMotion](http://www.inmotion.pt/pt/adafruit/983-mini-thermal-receipt-printer.html), etc)
+* FTDI basic breakout
+  ([example](https://www.sparkfun.com/products/9716))
 
 ## Advanced setup suggestion
 
+This alternative setup allows you to have your Taloenj working
+
 TBD
+
+
 
 ### Additional hardware
 
