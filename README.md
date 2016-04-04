@@ -55,7 +55,7 @@ phones and upload the pictures directly.
 ### Additional hardware
 
 In addition to the hardware required for the [Simple
-Setup](required-hardware), you'll need:
+Setup](#required-hardware), you'll need:
 
 * Raspberry Pi
 * WiFi dongle ([example](http://www.dx.com/p/ultra-mini-nano-usb-2-0-802-11n-150mbps-wifi-wlan-wireless-network-adapter-48166))
