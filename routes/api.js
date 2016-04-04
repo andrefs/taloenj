@@ -1,24 +1,20 @@
 'use strict';
-var formidable = require('formidable');
-var async      = require('fastsync');
-var paths      = require('./config').paths;
-var actions    = [];
-var convert    = require('./api/imagemagick').convert;
-var printer    = require('./api/printer').printer;
-var fs         = require('fs.extra');
-var spritz     = require('./spritz');
-var glob       = require('glob');
-var log        = require('./log').log('api');
+var express = require('express');
+var router  = express.Router();
+var async   = require('fastsync');
+var paths   = require('../lib/config').paths;
+var convert = require('../lib/imagemagick').convert;
+var printer = require('../lib/printer').printer;
+var fs      = require('fs.extra');
+var glob    = require('glob');
 
-exports.actions = [
-    [/\/api\/print\/?/, {method: 'POST'}, print]
-];
+router.post('/print/', print);
 
 function print(req, res){
-    var file = req.POSTfiles['img-upload'];
-    var opts = req.POSTargs['opts'] || {};
-    var z1   = +req.POSTargs['z1'];
-    var z2   = +req.POSTargs['z2'];
+    var file =  req.body['img-upload'];
+    var opts =  req.body['opts'] || {};
+    var z1   = +req.body['z1'];
+    var z2   = +req.body['z2'];
     var imParams = [
         '-resize'    , '384x2000',
         '-level'     , (z1*100)+'%,'+(z2*100)+'%',
@@ -55,7 +51,7 @@ function print(req, res){
                     startedAt  : timestamp,
                     finishedAt : new Date().getTime()
                 };
-                return spritz.json(req,res,result, 500);
+                return res.send(result);
             }
 
             var result = {
@@ -63,8 +59,9 @@ function print(req, res){
                 startedAt  : timestamp,
                 finishedAt : new Date().getTime()
             };
-            return spritz.json(req,res,result);
+            return res.send(result);
         }
     );
 }
 
+module.exports = router;
