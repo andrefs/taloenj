@@ -22,5 +22,11 @@
     "serve-favicon": "2.3.0",
     "thermalprinter": "0.3.8",
     "winston": "2.2.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "mockery": "1.4.1",
+    "sinon": "1.17.3"
   }
 }
