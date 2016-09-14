@@ -17,8 +17,8 @@
   ],
   "author": "André Santos",
   "license": "ISC",
-  engines: {
-      { "node" : "~0.10.40" }
+  "engines": {
+    "node" : "~0.10.40"
   },
   "dependencies": {
     "app-root-path": "^1.0.0",
