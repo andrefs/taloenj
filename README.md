@@ -1,5 +1,7 @@
 # taloenj:  "Print your phone pictures using a thermal printer"
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/andrefs/taloenj.svg)](https://greenkeeper.io/)
+
 
 `taloenj` is a node.js web app which allows you to upload pictures and sends them to the Sparkfun/Adafruit/... thermal printer
 
