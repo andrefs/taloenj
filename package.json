@@ -18,11 +18,12 @@
   "author": "André Santos",
   "license": "ISC",
   "engines": {
-    "node" : "~0.10.40"
+    "node": "~0.10.40"
   },
   "dependencies": {
     "app-root-path": "^1.0.0",
     "async": "^0.9.0",
+    "deasync": "^0.1.10",
     "fastsync": "^0.4.0",
     "formidable": "^1.0.17",
     "fs.extra": "^1.3.2",
@@ -32,8 +33,8 @@
     "jsonfile": "^2.0.1",
     "mkdirp": "^0.5.1",
     "moment": "^2.10.3",
-    "serialport": "^1.7.4",
+    "serialport": "2.0.6",
     "spritz": "^0.2.8",
-    "thermalprinter": "^0.2.0"
+    "thermalprinter": "latest"
   }
 }
